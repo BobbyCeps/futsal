@@ -35,3 +35,29 @@ button {
   margin-left: 3.3%;
   margin-top: 3%;
 }
+/*PARTIE TABLEAU SCORE*/
+#score {
+  width: auto;
+  height: 500px;
+  clear: both;
+}
+
+.terrain_1, .terrain_2, .terrain_3 {
+  height: 100%;
+  background-color: pink;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+}
+tr {
+  text-align: center;
+}
+input {
+  text-align: center;
+}

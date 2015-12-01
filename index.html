@@ -5,6 +5,7 @@
    <link type="text/css" rel="stylesheet" href="style.css"/>
    <script type="text/javascript" src="nomequipe.js"></script>
    <script type="text/javascript" src="joueurs.js"></script>
+   <script type="text/javascript" src="equipeterrain.js"></script>
    <title>Futsal</title>
    <meta charset="utf-8">
 </head>
@@ -55,10 +56,57 @@
                   </div>
   </div>
   <div id="score">
-  </div>
-  <div id="bracket">
-  </div>
-  <div id="description">
+           <div class="terrain_1">
+                  <table>
+                        <caption>Terrain1</caption>
+                    <tr>
+                        <th>Match n°</th>
+                        <th>Equipe 1</th>
+                        <th>score</th>
+                        <th>Equipe A</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>1er</td>
+                        <td><input type="text" size="10"/></td>
+                        <td><input id="resultat_equipe1_match1" type="number"/></td>
+                        <td><input type="text" size="10"/></td>
+                        <td><input id="resultat_equipeA_match1" type="number" onchange="colorWin();"/></td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td><input type="text" size="10"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="text" size="10"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>3eme</td>
+                        <td>shark</td>
+                        <td> 3 </td>
+                        <td>crocosaurus</td>
+                        <td> 5 </td>
+                    </tr>
+                    <tr>
+                        <td>4eme</td>
+                        <td>shark</td>
+                        <td> 3 </td>
+                        <td>crocosaurus</td>
+                        <td> 5 </td>
+                    </tr>
+                    <tr>
+                        <td>5eme</td>
+                        <td>shark</td>
+                        <td> 3 </td>
+                        <td>crocosaurus</td>
+                        <td> 5 </td>
+                    </tr>
+                  </table>
+           </div>
+           <div class="terrain_2">test
+           </div>
+           <div class="terrain_3">test
+           </div>
   </div>
 </div>
 </body>
