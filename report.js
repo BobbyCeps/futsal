@@ -38,6 +38,8 @@ function scoreEquip() {
   document.getElementById("score1_eq1").innerHTML = 0;
   document.getElementById("score1_eq2").innerHTML = 3;
 }
+  }else {
+    
   }
 }
 
