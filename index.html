@@ -2,159 +2,385 @@
 <html>
 
 <head>
-   <link type="text/css" rel="stylesheet" href="style.css"/>
-   <script type="text/javascript" src="nomequipe.js"></script>
-   <script type="text/javascript" src="joueurs.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="nomequipe.js"></script>
+    <script type="text/javascript" src="joueurs.js"></script>
     <script type="text/javascript" src="report.js"></script>
-   <title>Futsal</title>
-   <meta charset="utf-8">
+    <title>Futsal</title>
+    <meta charset="utf-8">
 </head>
-<body>
-<div id="wrapper">
-  <div id="equipe">
-                  <div class="equipe_1">
-                      <button onclick="addTitre();">Ajouter le nom de l'équipe !</button>
-                      <button onclick="addPlayer();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq1"></p>
-                      <ul id="ul_team_1">
-                      </ul>
-                  </div>
-                  <div class="equipe_2">
-                    <button onclick="addTitre2();">Ajouter le nom de l'équipe !</button>
-                    <button onclick="addPlayer2();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq2"></p>
-                      <ul id="ul_team_2">
-                      </ul>
-                  </div>
-                  <div class="equipe_3">
-                    <button onclick="addTitre3();">Ajouter le nom de l'équipe !</button>
-                    <button onclick="addPlayer3();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq3"></p>
-                      <ul id="ul_team_3">
-                      </ul>
-                  </div>
-                  <div class="equipe_4">
-                    <button onclick="addTitre4();">Ajouter le nom de l'équipe !</button>
-                    <button onclick="addPlayer4();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq4"></p>
-                      <ul id="ul_team_4">
-                      </ul>
-                  </div>
-                  <div class="equipe_5">
-                    <button onclick="addTitre5();">Ajouter le nom de l'équipe !</button>
-                    <button onclick="addPlayer5();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq5"></p>
-                      <ul id="ul_team_5">
-                      </ul>
-                  </div>
-                  <div class="equipe_6">
-                    <button onclick="addTitre6();">Ajouter le nom de l'équipe !</button>
-                    <button onclick="addPlayer6();">Ajouter le nom des joueurs</button>
-                      <p class="titre" id="titre_eq6"></p>
-                      <ul id="ul_team_6">
-                      </ul>
-                  </div>
-  </div>
-  <div id="bracket">
-      <div class="ordre"><p class="liste">Liste</p></div>
-      <p class="liste">Ordre des Matchs</p>
-      <div class="equip1"><p id="rEq1_1"></p></div>
-      <div class="but_1"><input onchange="scoreEquip();" type="text" id="result1_1" /></div>
-      <div class="equip1"><p id="rEq1_2"></p></div>
-      <div class="but_1"><input onchange="scoreEquip();" type="text" id="result2_1" /></div>
-      <div class="equip1"><p id="rEq1_3"></p></div>
-      <div class="but_1"><input onchange="scoreEquip();" type="text" id="result3_1" /></div>
-      <div class="equip1"><p id="rEq1_4"></p></div>
-      <div class="but_1"><input onchange="scoreEquip();" type="text" id="result4_1" /></div>
-      <div class="equip1"><p id="rEq1_5"></p></div>
-      <div class="but_1"><input onchange="scoreEquip();" type="text" id="result5_1" /></div>
-      
-      <div class="equip2"><p id="rEq2_1"></p></div>
-      <div class="but_2"><input onchange="scoreEquip();" type="text" id="result1_2" /></div>
-      <div class="equip2"><p id="rEq2_2"></p></div>
-      <div class="but_2"><input onchange="scoreEquip();" type="text" id="result2_2" /></div>
-      <div class="equip2"><p id="rEq2_3"></p></div>
-      <div class="but_2"><input onchange="scoreEquip();" type="text" id="result3_2" /></div>
-      <div class="equip2"><p id="rEq2_4"></p></div>
-      <div class="but_2"><input onchange="scoreEquip();" type="text" id="result4_2" /></div>
-      <div class="equip2"><p id="rEq2_5"></p></div>
-      <div class="but_2"><input onchange="scoreEquip();" type="text" id="result5_2" /></div>
-      
-      <hr />
-      
-      <div class="equip2"><p id="rEq3_1"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result1_3" /></div>
-      <div class="equip2"><p id="rEq3_2"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result2_3" /></div>
-      <div class="equip2"><p id="rEq3_3"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result3_3" /></div>
-      <div class="equip2"><p id="rEq3_4"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result4_3" /></div>
-      <div class="equip2"><p id="rEq3_5"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result5_3" /></div>
-      
-      <div class="equip2"><p id="rEq4_1"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result1_4" /></div>
-      <div class="equip2"><p id="rEq4_2"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result2_4" /></div>
-      <div class="equip2"><p id="rEq4_3"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result3_4" /></div>
-      <div class="equip2"><p id="rEq4_4"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result4_4" /></div>
-      <div class="equip2"><p id="rEq4_5"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result5_4" /></div>
-      
-      <hr />
-      
-      <div class="equip2"><p id="rEq5_1"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result1_5" /></div>
-      <div class="equip2"><p id="rEq5_2"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result2_5" /></div>
-      <div class="equip2"><p id="rEq5_3"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result3_5" /></div>
-      <div class="equip2"><p id="rEq5_4"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result4_5" /></div>
-      <div class="equip2"><p id="rEq5_5"></p></div>
-      <div class="but_3"><input onchange="scoreEquip();" type="text" id="result5_5" /></div>
-      
-      <div class="equip2"><p id="rEq6_1"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result1_6" /></div>
-      <div class="equip2"><p id="rEq6_2"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result2_6" /></div>
-      <div class="equip2"><p id="rEq6_3"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result3_6" /></div>
-      <div class="equip2"><p id="rEq6_4"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result4_6" /></div>
-      <div class="equip2"><p id="rEq6_5"></p></div>
-      <div class="but_4"><input onchange="scoreEquip();" type="text" id="result5_6" /></div>
-  </div>
-  <div id="score">
-      <div class="ordre"><p class="liste">Tableau</p></div>
-      <p class="liste">Score</p>
-      <table>
-            <tr>
-                <th>Equipe</th><th>score match 1</th><th>score match 2</th><th>score match 3</th><th>score match 4</th><th>score match 5</th>
-            </tr>
-            <tr>
-                <td id="score_joueur_1"></td><td id="score1_eq1"></td><td id="score2_eq2"></td><td id="score3_eq3"></td><td id="score4_eq4"></td><td id="score5_eq5"></td>
-            </tr>
-            <tr>
-                <td id="score_joueur_2"></td><td id="score1_eq2"></td><td id="score2_eq2"></td><td id="score3_eq2"></td><td id="score4_eq2"></td><td id="score5_eq2"></td>
-            </tr>
-            <tr>
-                <td id="score_joueur_3"></td><td id="score1_eq3"></td><td id="score2_eq3"></td><td id="score3_eq3"></td><td id="score4_eq3"></td><td id="score5_eq3"></td>
-            </tr>
-            <tr>
-                <td id="score_joueur_4"></td><td id="score1_eq4"></td><td id="score2_eq4"></td><td id="score3_eq4"></td><td id="score4_eq4"></td><td id="score5_eq4"></td>
-            </tr>
-            <tr>
-                <td id="score_joueur_5"></td><td id="score1_eq5"></td><td id="score2_eq5"></td><td id="score3_eq5"></td><td id="score4_eq5"></td><td id="score5_eq5"></td>
-            </tr>
-            <tr>
-                <td id="score_joueur_6"></td><td id="score1_eq6"></td><td id="score2_eq6"></td><td id="score3_eq6"></td><td id="score4_eq6"></td><td id="score5_eq6"></td>
-            </tr>
-      </table>
-  </div>
-</div>
+
+<body onload="loadtitre()">
+    <div id="wrapper">
+        <div id="equipe">
+            <div class="equipe_1">
+                <button onclick="addTitre(1);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(1);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq1"></p>
+                <ul id="ul_team_1">
+                </ul>
+            </div>
+            <div class="equipe_2">
+                <button onclick="addTitre(2);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(2);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq2"></p>
+                <ul id="ul_team_2">
+                </ul>
+            </div>
+            <div class="equipe_3">
+                <button onclick="addTitre(3);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(3);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq3"></p>
+                <ul id="ul_team_3">
+                </ul>
+            </div>
+            <div class="equipe_4">
+                <button onclick="addTitre(4);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(4);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq4"></p>
+                <ul id="ul_team_4">
+                </ul>
+            </div>
+            <div class="equipe_5">
+                <button onclick="addTitre(5);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(5);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq5"></p>
+                <ul id="ul_team_5">
+                </ul>
+            </div>
+            <div class="equipe_6">
+                <button onclick="addTitre(6);">Ajouter le nom de l'équipe !</button>
+                <button onclick="addPlayer(6);">Ajouter le nom des joueurs</button>
+                <p class="titre" name="titre_eq6"></p>
+                <ul id="ul_team_6">
+                </ul>
+            </div>
+        </div>
+        <div id="bracket">
+            <div class="ordre">
+                <p class="liste">Liste</p>
+            </div>
+            <p class="liste">Ordre des Matchs</p>
+
+            <table>
+                <!-- ROW 1 -->
+                <tr>
+                    <td>
+                        <!-- Match: 1 vs 6 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq1"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs6_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs6_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq6"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 2 vs 5 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq2"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_2vs5_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_2vs5_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq5"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 3 vs 4 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq3"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_3vs4_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_3vs4_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq4"></p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- ROW 2 -->
+                <tr>
+                    <td>
+                        <!-- Match: 1 vs 5 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq1"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs5_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs5_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq5"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 6 vs 4 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq6"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_6vs4_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_6vs4_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq4"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 2 vs 3 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq2"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_2vs3_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_2vs3_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq3"></p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- ROW 3 -->
+                <tr>
+                    <td>
+                        <!-- Match: 1 vs 4 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq1"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs4_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs4_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq4"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 5 vs 3 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq5"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_5vs3_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_5vs3_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq3"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 6 vs 2 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq6"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_6vs2_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_6vs2_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq2"></p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- ROW 4 -->
+                <tr>
+                    <td>
+                        <!-- Match: 1 vs 3 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq1"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs3_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs3_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq3"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 4 vs 2 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq4"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_4vs2_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_4vs2_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq2"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 5 vs 6 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq5"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_5vs6_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_5vs6_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq6"></p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- ROW 5 -->
+                <tr>
+                    <td>
+                        <!-- Match: 1 vs 2 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq1"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs2_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_1vs2_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq2"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 3 vs 6 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq3"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_3vs6_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_3vs6_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq6"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- Match: 4 vs 5 -->
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq4"></p>
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_4vs5_a" />
+                        </div>
+                        <div class="but_1">
+                            <input onchange="scoreEquip();" type="text" id="result_4vs5_b" />
+                        </div>
+                        <div class="equip1">
+                            <p class="titre_m" name="titre_eq5"></p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="score">
+            <div class="ordre">
+                <p class="liste">Tableau</p>
+            </div>
+            <p class="liste">Score</p>
+            <table>
+                <tr>
+                    <th>Equipe</th>
+                    <th>score match 1</th>
+                    <th>score match 2</th>
+                    <th>score match 3</th>
+                    <th>score match 4</th>
+                    <th>score match 5</th>
+                    <th>Score Total</th>
+                </tr>
+                <tr>
+                    <td name="titre_eq1"></td>
+                    <td class="scorevs" id="score1_eq1"></td>
+                    <td class="scorevs" id="score2_eq1"></td>
+                    <td class="scorevs" id="score3_eq1"></td>
+                    <td class="scorevs" id="score4_eq1"></td>
+                    <td class="scorevs" id="score5_eq1"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq1"></td>
+                </tr>
+                <tr>
+                    <td name="titre_eq2"></td>
+                    <td class="scorevs" id="score1_eq2"></td>
+                    <td class="scorevs" id="score2_eq2"></td>
+                    <td class="scorevs" id="score3_eq2"></td>
+                    <td class="scorevs" id="score4_eq2"></td>
+                    <td class="scorevs" id="score5_eq2"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq2"></td>
+                </tr>
+                <tr>
+                    <td name="titre_eq3"></td>
+                    <td class="scorevs" id="score1_eq3"></td>
+                    <td class="scorevs" id="score2_eq3"></td>
+                    <td class="scorevs" id="score3_eq3"></td>
+                    <td class="scorevs" id="score4_eq3"></td>
+                    <td class="scorevs" id="score5_eq3"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq3"></td>
+                </tr>
+                <tr>
+                    <td name="titre_eq4"></td>
+                    <td class="scorevs" id="score1_eq4"></td>
+                    <td class="scorevs" id="score2_eq4"></td>
+                    <td class="scorevs" id="score3_eq4"></td>
+                    <td class="scorevs" id="score4_eq4"></td>
+                    <td class="scorevs" id="score5_eq4"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq4"></td>
+                </tr>
+                <tr>
+                    <td name="titre_eq5"></td>
+                    <td class="scorevs" id="score1_eq5"></td>
+                    <td class="scorevs" id="score2_eq5"></td>
+                    <td class="scorevs" id="score3_eq5"></td>
+                    <td class="scorevs" id="score4_eq5"></td>
+                    <td class="scorevs" id="score5_eq5"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq5"></td>
+                </tr>
+                <tr>
+                    <td name="titre_eq6"></td>
+                    <td class="scorevs" id="score1_eq6"></td>
+                    <td class="scorevs" id="score2_eq6"></td>
+                    <td class="scorevs" id="score3_eq6"></td>
+                    <td class="scorevs" id="score4_eq6"></td>
+                    <td class="scorevs" id="score5_eq6"></td>
+                    <td name="scoretotal" class="scorevs" id="total_eq6"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>
